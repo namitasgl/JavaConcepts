@@ -1,5 +1,17 @@
+/**
+ * Copyright Namita Sehgal 2023
+ * 
+ * The copyright of the computer program is with Namita Sehgal.
+ * The program code is solely can be used for learning purpose only.
+ * This project is neither inspired nor copied from any other programmer or learning sites.
+ */
+
 package exception;
 
+/**
+ * @author engin
+ *
+ */
 import java.io.FileNotFoundException;
 import java.io.IOException;
 

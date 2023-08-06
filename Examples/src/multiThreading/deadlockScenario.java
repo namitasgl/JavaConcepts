@@ -1,5 +1,17 @@
+/**
+ * Copyright Namita Sehgal 2023
+ * 
+ * The copyright of the computer program is with Namita Sehgal.
+ * The program code is solely can be used for learning purpose only.
+ * This project is neither inspired nor copied from any other programmer or learning sites.
+ */
+
 package multiThreading;
 
+/**
+ * @author engin
+ *
+ */
 public class deadlockScenario {
 
 	public static void main(String[] arg) {
