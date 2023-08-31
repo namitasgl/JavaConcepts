@@ -162,17 +162,24 @@ public class programming {
 			 * Given a String, 
 			 * find the max word in a sentence using Stream functions?
 			 */
-			String input1 ="Hello myself Namita Sehgal myself";
+			String input1 ="Hello mysel1f Namita Sehgal myself";
 			System.out.println("find the max word in a sentence using Stream functions?");
 			System.out.println(input1);
 			List<String> inputOfString = Arrays.asList(input1.split(" "));
 			System.out.println(inputOfString);
+			// 2 ways to fetch the max word
+			// ist way
 			HashMap<String, Integer> resultofString = (HashMap)inputOfString.stream().collect(Collectors.toMap(Function.identity(),value -> ((String) value).length(), (first,second )-> first));
 			/*
 			 * Function.Identity() - return what comes as an input
 			 *  to avoid duplicate key - provide merge function - how the duplicate should be handled. in this scenario it is handled by taking first
 			 */
-			//resultofString.entrySet().stream().max(Integer::compare);
+			Optional resultofString1 = resultofString.entrySet().stream().map( value -> value.getValue()).max(Integer::compare);
+			resultofString1.ifPresent( val -> System.out.println (" word :"+ val));
+			// 2nd way
+			Optional value1=    inputOfString.stream().distinct().max(Comparator.comparingInt(value -> value.length()));
+			value1.ifPresent(val -> System.out.println(" value :"+ value1.get() +" length :" +((String)value1.get()).length()));
+			
 	}
 
 }
